@@ -75,3 +75,13 @@ a {
 a:hover {
   color: var(--accent-color);
 }
+
+.lang {
+  display: none;
+}
+
+#language-selector {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
