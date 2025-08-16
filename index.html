@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Project – Alexander Kosyak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="#home">Alexander Kosyak</a></h1>
+      <nav class="nav">
+        <a href="#about"><span class="lang-en">About</span><span class="lang-ru">Обо мне</span></a>
+        <a href="#projects"><span class="lang-en">Projects</span><span class="lang-ru">Проекты</span></a>
+        <a href="#contact"><span class="lang-en">Contact</span><span class="lang-ru">Контакты</span></a>
+      </nav>
+      <select id="lang-toggle" aria-label="Language selector">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container">
+      <h2 class="lang-en">Art Paris Project</h2>
+      <h2 class="lang-ru">Проект Art Paris</h2>
+      <p class="lang-en">A notebook of works and ideas by Alexander Kosyak.</p>
+      <p class="lang-ru">Дневник работ и идей Александра Косяка.</p>
+    </div>
+  </main>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h3 class="lang-en">About</h3>
+      <h3 class="lang-ru">Обо мне</h3>
+      <p class="lang-en">Alexander Kosyak is a visual artist working between Russia and France. His practice spans painting, digital media, and site‑specific installations exploring the pulse of contemporary cities.</p>
+      <p class="lang-ru">Художник Александр Косяк работает между Россией и Францией. В своей практике он соединяет живопись, цифровые медиа и site‑specific инсталляции, исследующие ритм современного города.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h3 class="lang-en">Projects</h3>
+      <h3 class="lang-ru">Проекты</h3>
+      <ul class="project-list">
+        <li>
+          <h4 class="lang-en">Art Paris Project</h4>
+          <h4 class="lang-ru">Проект Art Paris</h4>
+          <p class="lang-en">Series of installations mapping personal narratives onto the streets of Paris.</p>
+          <p class="lang-ru">Серия инсталляций, накладывающих личные истории на улицы Парижа.</p>
+        </li>
+        <li>
+          <h4 class="lang-en">Sketchbook Series</h4>
+          <h4 class="lang-ru">Серия «Скетчбук»</h4>
+          <p class="lang-en">Daily drawing exercise capturing fleeting urban moments.</p>
+          <p class="lang-ru">Ежедневная практика зарисовок, фиксирующая мимолётные городские моменты.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h3 class="lang-en">Contact</h3>
+      <h3 class="lang-ru">Контакты</h3>
+      <p class="lang-en">Reach out for collaborations or exhibition inquiries.</p>
+      <p class="lang-ru">Свяжитесь для сотрудничества или вопросов о выставках.</p>
+      <a class="button" href="mailto:hello@alexanderkosyak.com">
+        <span class="lang-en">Email Me</span>
+        <span class="lang-ru">Написать</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small class="lang-en">&copy; <span id="year"></span> Alexander Kosyak. All rights reserved.</small>
+      <small class="lang-ru">&copy; <span id="year"></span> Александр Косяк. Все права защищены.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
