@@ -370,7 +370,7 @@
     const blocks = document.querySelectorAll('.lang');
     function updateLanguage() {
       blocks.forEach(block => {
-        block.style.display = block.classList.contains(selector.value) ? '' : 'none';
+        block.style.display = block.classList.contains(selector.value) ? 'block' : 'none';
       });
     }
     selector.addEventListener('change', updateLanguage);
