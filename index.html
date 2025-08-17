@@ -17,6 +17,7 @@
 <option value="de">Deutsch</option>
 <option value="fr">Français</option>
 </select>
+<button id="theme-toggle">Dark Mode</button>
 <div class="lang en">
 <header>
 <h1>Alexander Kosyak</h1>
@@ -392,6 +393,7 @@
 <script>
     const selector = document.getElementById('language-selector');
     const blocks = document.querySelectorAll('.lang');
+    const themeToggle = document.getElementById('theme-toggle');
     function updateLanguage() {
       blocks.forEach(block => {
         block.style.display = block.classList.contains(selector.value) ? 'block' : 'none';
@@ -399,6 +401,15 @@
     }
     selector.addEventListener('change', updateLanguage);
     updateLanguage();
+
+    function updateThemeButton() {
+      themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
+    }
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      updateThemeButton();
+    });
+    updateThemeButton();
   </script>
 </body>
 </html>
