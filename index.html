@@ -4,6 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
 <title>Alexander Kosyak – Art Project</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -11,13 +12,15 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<select id="language-selector">
-<option value="en">English</option>
-<option value="ru">Русский</option>
-<option value="de">Deutsch</option>
-<option value="fr">Français</option>
-</select>
-<button id="theme-toggle">Dark Mode</button>
+<nav class="toolbar">
+  <button id="theme-toggle" aria-label="Toggle dark mode">Dark Mode</button>
+  <select id="language-selector" aria-label="Select language">
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+    <option value="de">Deutsch</option>
+    <option value="fr">Français</option>
+  </select>
+</nav>
 <div class="lang en">
 <header>
 <h1>Alexander Kosyak</h1>
@@ -394,6 +397,11 @@
     const selector = document.getElementById('language-selector');
     const blocks = document.querySelectorAll('.lang');
     const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark-theme');
+    }
     function updateLanguage() {
       blocks.forEach(block => {
         block.style.display = block.classList.contains(selector.value) ? 'block' : 'none';
@@ -406,7 +414,8 @@
       themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
     }
     themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-theme');
+      const isDark = document.body.classList.toggle('dark-theme');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
       updateThemeButton();
     });
     updateThemeButton();

@@ -4,18 +4,25 @@
   --accent-color: #333;
   --border-color: #eee;
   --muted-color: #666;
+  --radius: 0.25rem;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.1rem);
   background: var(--bg-color);
   color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 body.dark-theme {
@@ -90,18 +97,28 @@ a:hover {
   display: none;
 }
 
-#language-selector {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-}
-
-#theme-toggle {
+.toolbar {
   position: fixed;
   top: 1rem;
   left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+#language-selector,
+#theme-toggle {
+  font: inherit;
   background: var(--bg-color);
   color: var(--text-color);
   border: 1px solid var(--border-color);
+  border-radius: var(--radius);
   padding: 0.25rem 0.5rem;
+}
+
+#language-selector:focus-visible,
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
