@@ -2,6 +2,8 @@
   --bg-color: #fdfdfd;
   --text-color: #222;
   --accent-color: #333;
+  --border-color: #eee;
+  --muted-color: #666;
 }
 
 * {
@@ -16,10 +18,18 @@ body {
   color: var(--text-color);
 }
 
+body.dark-theme {
+  --bg-color: #222;
+  --text-color: #fdfdfd;
+  --accent-color: #ddd;
+  --border-color: #444;
+  --muted-color: #aaa;
+}
+
 header {
   text-align: center;
   padding: 2rem 1rem 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 
 header h1 {
@@ -61,9 +71,9 @@ ul li {
 footer {
   text-align: center;
   padding: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
-  color: #666;
+  color: var(--muted-color);
 }
 
 a {
@@ -84,4 +94,14 @@ a:hover {
   position: fixed;
   top: 1rem;
   right: 1rem;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.5rem;
 }
