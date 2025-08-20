@@ -54,6 +54,7 @@ header h1 {
   display: block;
   max-width: 300px;
   width: 100%;
+  height: auto;
   margin: 1rem auto;
   border-radius: var(--radius);
 }
