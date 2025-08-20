@@ -5,6 +5,7 @@
   --border-color: #eee;
   --muted-color: #666;
   --radius: 0.25rem;
+  --toolbar-height: 0px;
 }
 
 * {
@@ -23,6 +24,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
+  padding-top: var(--toolbar-height);
 }
 
 body.dark-theme {
@@ -125,18 +127,21 @@ a:hover {
 
 .toolbar {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
   z-index: 20;
 }
 
 .top-nav {
   position: sticky;
-  top: 3.5rem;
+  top: var(--toolbar-height);
   background: var(--bg-color);
   display: flex;
   flex-wrap: wrap;

@@ -492,6 +492,13 @@
   </div>
 </div>
 <script>
+  const toolbar = document.querySelector('.toolbar');
+  function updateToolbarHeight() {
+    document.documentElement.style.setProperty('--toolbar-height', toolbar.offsetHeight + 'px');
+  }
+  window.addEventListener('resize', updateToolbarHeight);
+  updateToolbarHeight();
+
   const langButtons = document.querySelectorAll('.lang-switcher button');
   const blocks = document.querySelectorAll('[data-lang]');
   const blocksContainer = document.getElementById('lang-blocks');
