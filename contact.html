@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <title>Contact - Alexander Kosyak Art Studio</title>
+  <meta name="description" content="Contact information for artist Alexander Kosyak."/>
+  <meta property="og:title" content="Contact - Alexander Kosyak Art Studio"/>
+  <meta property="og:description" content="Email and phone for Alexander Kosyak."/>
+  <meta property="og:image" content="images/kosyak_studio_photo.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="biography.html">Biography</a>
+    <a href="last-works.html">Last Works</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <h1>Contact</h1>
+    <p><a class="email" data-user="alexander-kosyak-art" data-domain="yandex.ru"></a> <button class="copy-email" type="button">Copy email</button></p>
+    <p><a href="tel:+79032388355">+7 903 238 8355</a></p>
+  </main>
+  <footer>
+    <p>@ Alexanderkosyakartstudio. All rights reserved.</p>
+  </footer>
+  <script>
+    const link = document.querySelector('.email');
+    const email = `${link.dataset.user}@${link.dataset.domain}`;
+    link.href = `mailto:${email}`;
+    link.textContent = email;
+    document.querySelector('.copy-email').addEventListener('click', () => {
+      navigator.clipboard.writeText(email);
+    });
+  </script>
+</body>
+</html>
