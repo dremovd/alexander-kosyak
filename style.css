@@ -187,8 +187,8 @@ a:hover {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   padding: 2rem;
 }
