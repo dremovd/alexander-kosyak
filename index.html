@@ -1,44 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="color-scheme" content="light dark"/>
-  <title>Alexander Kosyak Art Studio</title>
-  <meta name="description" content="Artist Alexander Kosyak. Exhibitions since 1985. Member of Moscow Artists Union."/>
-  <meta property="og:title" content="Alexander Kosyak – Art Project"/>
-  <meta property="og:description" content="Artist. Exhibitions since 1985. Member of Moscow Artists Union."/>
-  <meta property="og:image" content="images/ak1.jpg"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alexander Kosyak",
-    "birthDate": "1957-12-08",
-    "memberOf": "Moscow Artists Union",
-    "award": "Russian Academy of Arts diploma"
-  }
-  </script>
-</head>
-<body>
-  <nav class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="biography.html">Biography</a>
-    <a href="last-works.html">Last Works</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <main class="gallery">
-    <img src="images/ak1.jpg" alt="Alexander Kosyak in his studio"/>
-    <img src="images/ak2.jpg" alt="Studio view"/>
-    <img src="images/ak3.jpg" alt="Studio view"/>
-    <img src="images/ak4.jpg" alt="Graphic artwork"/>
-  </main>
-  <footer>
-    <p>© Alexander Kosyak Art Studio. All rights reserved.</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Alexander Kosyak Art Studio</title>
+    <meta
+      name="description"
+      content="Artist Alexander Kosyak. Exhibitions since 1985. Member of Moscow Artists Union."
+    />
+    <meta property="og:title" content="Alexander Kosyak – Art Project" />
+    <meta
+      property="og:description"
+      content="Artist. Exhibitions since 1985. Member of Moscow Artists Union."
+    />
+    <meta property="og:image" content="images/ak1.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alexander Kosyak",
+        "birthDate": "1957-12-08",
+        "memberOf": "Moscow Artists Union",
+        "award": "Russian Academy of Arts diploma"
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="biography.html">Biography</a>
+      <a href="last-works.html">Last Works</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <main class="gallery">
+      <figure class="artwork">
+        <img src="images/ak1.jpg" alt="ink on paper, 100 × 130 cm" />
+        <figcaption>ink on paper,<br />100 × 130 cm</figcaption>
+      </figure>
+      <figure class="artwork">
+        <img
+          src="images/ak2.jpg"
+          alt='"Moonlight" acrylic on canvas, 220 × 140 cm'
+        />
+        <figcaption>
+          "Moonlight"<br />acrylic on canvas<br />220 × 140 cm
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <img
+          src="images/ak3.jpg"
+          alt='"Prophets" (fragment) acrylic on canvas'
+        />
+        <figcaption>"Prophets" (fragment)<br />acrylic on canvas</figcaption>
+      </figure>
+      <figure class="artwork">
+        <img
+          src="images/ak4.jpg"
+          alt='"At sunset" acrylic on canvas, 180 × 120 cm'
+        />
+        <figcaption>
+          "At sunset"<br />acrylic on canvas<br />180 × 120 cm
+        </figcaption>
+      </figure>
+    </main>
+    <footer>
+      <p>© Alexander Kosyak Art Studio. All rights reserved.</p>
+    </footer>
+    <script>
+      document.querySelectorAll(".gallery .artwork").forEach((fig) => {
+        fig.addEventListener("click", () => {
+          const caption = fig.querySelector("figcaption");
+          caption.classList.toggle("visible");
+        });
+      });
+    </script>
+  </body>
 </html>

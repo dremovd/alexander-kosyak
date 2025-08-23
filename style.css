@@ -18,12 +18,14 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   font-size: clamp(1rem, 0.9rem + 0.3vw, 1.1rem);
   background: var(--bg-color);
   color: var(--text-color);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
   padding-top: var(--toolbar-height);
 }
 
@@ -195,3 +197,23 @@ a:hover {
   display: block;
 }
 
+.gallery .artwork {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery .artwork figcaption {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.gallery .artwork figcaption.visible {
+  display: block;
+}
