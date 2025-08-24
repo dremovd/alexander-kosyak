@@ -94,6 +94,10 @@ h2 {
   font-weight: 600;
 }
 
+.period-title {
+  font-weight: 400;
+}
+
 ul {
   list-style: none;
   padding: 0;
