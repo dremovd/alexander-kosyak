@@ -224,8 +224,11 @@ a:hover {
 .title-with-photo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .profile-photo {
