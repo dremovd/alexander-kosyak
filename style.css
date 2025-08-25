@@ -221,3 +221,30 @@ a:hover {
 .gallery .artwork figcaption.visible {
   display: block;
 }
+.title-with-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  height: auto;
+}
+
+.bio-header img {
+  width: 150px;
+}
+
+.home-header img {
+  width: 16%;
+  max-width: 150px;
+}
+
+.period-divider {
+  border: none;
+  border-top: 2px solid var(--accent-color);
+  width: 95%;
+  margin: 2rem 0 1rem;
+}
