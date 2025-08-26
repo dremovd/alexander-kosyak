@@ -125,6 +125,15 @@ a:hover {
   color: var(--accent-color);
 }
 
+.lang-switcher {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.25rem;
+}
+
 .lang-switcher button,
 #theme-toggle {
   font: inherit;
