@@ -44,8 +44,8 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .tagline {
@@ -253,13 +253,6 @@ a:hover {
 .profile-photo {
   border-radius: 50%;
   height: auto;
-}
-
-.bio-header img {
-  width: 150px;
-}
-
-.home-header img {
   width: 16%;
   max-width: 150px;
 }
