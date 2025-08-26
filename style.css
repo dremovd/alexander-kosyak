@@ -134,6 +134,16 @@ a:hover {
   gap: 0.25rem;
 }
 
+@media (max-width: 600px) {
+  .lang-switcher {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
 .lang-switcher button,
 #theme-toggle {
   font: inherit;
