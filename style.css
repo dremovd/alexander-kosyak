@@ -257,6 +257,11 @@ a:hover {
   max-width: 150px;
 }
 
+.bio-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .period-divider {
   border: none;
   border-top: 2px solid var(--accent-color);
