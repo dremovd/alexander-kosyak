@@ -263,9 +263,3 @@ a:hover {
   font-weight: 600;
 }
 
-.period-divider {
-  border: none;
-  border-top: 2px solid var(--accent-color);
-  width: 95%;
-  margin: 2rem 0 1rem;
-}
